@@ -1,5 +1,4 @@
-# voiceassistant
-My voice assistant, for comp sci presumably. DONT STEAL TAJ!!!!
+# Voice Assistant!!!!!!!!!!!!!!
 
 This is a very cool, epic, awesome voice assistant made by me. Is there a feature that you want implemented? Do you think that this project could be the next facebook?
 
