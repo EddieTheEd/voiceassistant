@@ -1,16 +1,17 @@
 
 from cProfile import label
+from cgitb import text
 import subprocess
 import wolframalpha
 import pyttsx3
 import sys
 import tkinter as tk
-from tkinter import ttk
+from tkinter import PhotoImage, ttk
 import json
 import random
 import operator
 import speech_recognition as sr
-import datetime
+from datetime import datetime
 import wikipedia
 import webbrowser
 import os
@@ -30,6 +31,9 @@ from PIL import ImageTk, Image
 
 
 # Startup
+
+global name
+name = None
 
 clear = lambda: os.system('cls')
 clear()
@@ -54,7 +58,12 @@ for i in accountdatatemp:
         username = ' '.join(temp)
         accountdata.append(username)
 
+userdata = open('userdata.txt', 'w+')
 
+def log(message):
+    date = str(datetime.now())
+    userdata.write(date + "\n" + message + "\n\n")
+    print(date + "\n" + message + "\n\n")
 
 def speak(audio):
     engine.say(audio)
@@ -66,31 +75,37 @@ def takeCommand():
      
     with sr.Microphone() as source:
          
-        print("Listening...")
+        boxstatus("Listening...")
         r.pause_threshold = 1
         audio = r.listen(source)
   
     try:
-        print("Recognizing...")   
+        boxstatus('Program recognizing')
         query = r.recognize_google(audio, language ='en-in')
-        print(f"User said: {query}\n")
+        boxstatus(f"User said: {query}\n")
   
-    except Exception as e:
-        print(e)   
-        print("Unable to Recognize your voice.") 
+    except Exception as e: 
+        boxstatus('Program failed to understand voice')
         return "None"
      
     return query
 
 def boxstatus(input):
     window.label.destroy()
-    window.label = tk.Label(text = input)
+    window.imageLabel.destroy()
+
+    img = Image.open("./assets/voiceassistlogo.png")
+    resized = img.resize((75,75) , resample=3)
+    img = ImageTk.PhotoImage(resized)
+    
+    window.imageLabel = tk.Label(window, image = img)
+    
+    window.imageLabel.pack()
+
+    window.label = ttk.Label(text = input)
     window.label.pack()
     window.update()
-    print(f"Textbox was changed to {input}")
-
-def finduser(username):
-    print(username)
+    log(input)
 
 def intro():
     speak("what is your name")
@@ -110,30 +125,48 @@ def intro():
         time.sleep(0.5)
         intro()
 
+def finduser(username):
+    newdow.destroy()
+    global name
+    name = username
+    maingui()
+    boxstatus(f'Hello {name}!')
+    speak("hello" + name + ", welcome back.")
+    a = True
+    while a:
+        main()
+        time.sleep(3)
+
 def accountselection():
+    global newdow
+    window.destroy()
     newdow = tk.Tk()
-    newdow.geometry('320x130+5+5')
+    height = int(round(len(accountdata) * (150/6)))
+    newdow.geometry(f'320x{height}+470+50')
+    newdow.title("Available accounts: ")
+    newdow.iconbitmap('./assets/voiceassistlogo.ico')
     for i in accountdata:
-        window.label = ttk.Button(window, textvariable = window.text, command = findUser(i))
-
-
+        newdow.button = ttk.Button(text = str(i))
+        newdow.button['command'] = lambda i=i: finduser(i)
+        newdow.button.pack()
 
 def startup():
     boxstatus('Voice Assistant Status: Configuration')
     speak('processing, starting up')
     if not accountdata:
         speak('no previous user interaction detected')
+        log('no previous user interaction detected')
         intro()
     elif len(accountdata) == 1:
         name = accountdata[0]
-        boxstatus(f'Hello {name}!')
+        log(f'username {name} detected')
         speak("hello" + name + ", welcome back.")
         a = True
         while a:
             main()
             time.sleep(3)
     else:
-        speak('multiple users detected')
+        speak('multiple users detected. please choose your account.')
         accountselection()
         
 
@@ -143,6 +176,7 @@ def main():
 
     query = str(takeCommand()).split()
     boxstatus(f"Analysing input: '{' '.join(query)}'")
+    
     if 'obsidian' in query:
         speak("Understood, opening Obsidian")
         os.startfile("C:\\Users\\edwar\\AppData\\Local\\Obsidian\\Obsidian.exe")
@@ -157,23 +191,55 @@ def main():
         boxstatus("Success!")
     elif 'close program' in ' '.join(query):
         speak("Understood, see you again soon.")
+        log('Program terminated')
         exit()
     else:
         boxstatus("Failed to understand command.")
-        speak("Sorry. i don't understand. Please be more specific.")
+        speak("Sorry. i didn't catch that.")
+
+def maingui():
+    global window
+    window = tk.Tk()
+
+    img = Image.open("./assets/voiceassistlogo.png")
+    resized = img.resize((75,75) , resample=3)
+    img = ImageTk.PhotoImage(resized)
+    
+    window.imageLabel = tk.Label(window, image = img)
+    
+    window.imageLabel.pack()
+
+    window.iconbitmap('./assets/voiceassistlogo.ico')
+    window.title("Ed's Voice Assistant!")
+    window.geometry('320x130+5+5')
+
+    global label
+    window.label = ttk.Label(window, text='tkinter moment')
+    window.label.pack()
+
+    window.attributes('-topmost', 1)
+
+    window.update()
 
 
+#initial_window creation, i.e maingui with intialization button
+log('Program Initialised')
+
+global window
 window = tk.Tk()
 
-#image stuff
-img = Image.open("C:\\Users\\edwar\\Documents\\obsidianmindgarden\\assets\\avatar.png")
+#visual stuff
+global img
+img = Image.open("./assets/voiceassistlogo.png")
 resized = img.resize((75,75) , resample=3)
 img = ImageTk.PhotoImage(resized)
-label = tk.Label(window, image = img)
-label.pack()
 
+window.imageLabel = tk.Label(window, image = img)
+window.imageLabel.pack()
 
-window.iconbitmap('C:\\Users\\edwar\\Documents\\obsidianmindgarden\\assets\\favicon.ico')
+window.iconbitmap('./assets/voiceassistlogo.ico')
+
+#core window code
 
 window.title("Ed's Voice Assistant!")
 window.text = tk.StringVar()
