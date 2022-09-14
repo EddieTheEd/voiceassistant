@@ -1,66 +1,1347 @@
-2022-09-04 07:52:52.965064
+2022-09-05 14:42:31.963169
 Program Initialised
 
-2022-09-04 07:52:54.201890
+2022-09-05 14:42:59.998990
+Program Initialised
+
+2022-09-05 14:43:01.731816
 Voice Assistant Status: Configuration
 
-2022-09-04 07:53:03.540543
-Hello Ed!
+2022-09-05 14:43:13.436193
+Hello Christian!
 
-2022-09-04 07:53:06.154158
+2022-09-05 14:43:16.444175
 Voice Assistant Status: Listening
 
-2022-09-04 07:53:08.818339
+2022-09-05 14:43:19.273473
 Listening...
 
-2022-09-04 07:53:11.768380
+2022-09-05 14:43:21.298843
 Program recognizing
 
-2022-09-04 07:53:13.049359
-User said: oh Canada City
+2022-09-05 14:43:23.070697
+Program failed to understand voice
 
+2022-09-05 14:43:23.089996
+Analysing input: 'None'
 
-2022-09-04 07:53:13.071305
-Analysing input: 'oh Canada City'
-
-2022-09-04 07:53:13.081279
+2022-09-05 14:43:23.107800
 Failed to understand command.
 
-2022-09-04 07:53:19.380738
+2022-09-05 14:43:29.440906
 Voice Assistant Status: Listening
 
-2022-09-04 07:53:21.778979
+2022-09-05 14:43:31.913878
 Listening...
 
-2022-09-04 07:53:24.707805
+2022-09-05 14:43:35.186004
 Program recognizing
 
-2022-09-04 07:53:25.873915
+2022-09-05 14:43:36.685241
+User said: volcano city in
+
+
+2022-09-05 14:43:36.698977
+Analysing input: 'volcano city in'
+
+2022-09-05 14:43:36.722964
+Failed to understand command.
+
+2022-09-05 14:43:43.068871
+Voice Assistant Status: Listening
+
+2022-09-05 14:43:45.638128
+Listening...
+
+2022-09-05 14:43:49.289505
+Program recognizing
+
+2022-09-05 14:43:50.741813
 User said: open obsidian
 
 
-2022-09-04 07:53:25.884242
+2022-09-05 14:43:50.759149
 Analysing input: 'open obsidian'
 
-2022-09-04 07:53:28.802201
+2022-09-05 14:43:53.777044
 Success!
 
-2022-09-04 07:53:31.823857
+2022-09-05 14:43:56.805639
 Voice Assistant Status: Listening
 
-2022-09-04 07:53:34.213581
+2022-09-05 14:43:59.493437
 Listening...
 
-2022-09-04 07:53:39.429234
+2022-09-05 14:44:02.303413
 Program recognizing
 
-2022-09-04 07:53:40.370429
+2022-09-05 14:44:03.625960
+User said: program
+
+
+2022-09-05 14:44:03.641946
+Analysing input: 'program'
+
+2022-09-05 14:44:03.665929
+Failed to understand command.
+
+2022-09-05 14:44:10.002476
+Voice Assistant Status: Listening
+
+2022-09-05 14:44:12.600948
+Listening...
+
+2022-09-05 14:44:15.872845
+Program recognizing
+
+2022-09-05 14:44:17.173306
 User said: close program
 
 
-2022-09-04 07:53:40.379405
+2022-09-05 14:44:17.202215
 Analysing input: 'close program'
 
-2022-09-04 07:53:43.323168
-Program terminated
+2022-09-05 14:44:20.294830
+Program terminated via voice command
+
+2022-09-05 14:45:30.733189
+Program Initialised
+
+2022-09-05 14:45:32.631484
+Voice Assistant Status: Configuration
+
+2022-09-05 14:45:42.131060
+Hello Ed!
+
+2022-09-05 14:45:44.849853
+Voice Assistant Status: Listening
+
+2022-09-05 14:45:47.679861
+Listening...
+
+2022-09-05 14:45:52.463542
+Program recognizing
+
+2022-09-05 14:45:53.985398
+User said: close program
+
+
+2022-09-05 14:45:54.013057
+Analysing input: 'close program'
+
+2022-09-05 14:45:57.009812
+Program terminated via voice command
+
+2022-09-05 14:45:57.779817
+Program terminated via script ending.
+
+2022-09-05 14:46:16.899088
+Program Initialised
+
+2022-09-05 14:46:21.055158
+Program terminated via script ending.
+
+2022-09-05 14:47:35.386673
+Program Initialised
+
+2022-09-05 14:47:43.309622
+Program terminated via script ending.
+
+2022-09-05 14:48:17.036323
+Program Initialised
+
+2022-09-05 14:48:18.762021
+Voice Assistant Status: Configuration
+
+2022-09-05 14:48:28.009150
+Hello Ed!
+
+2022-09-05 14:48:30.699431
+Voice Assistant Status: Listening
+
+2022-09-05 14:48:33.537431
+Listening...
+
+2022-09-05 14:48:39.405285
+Program recognizing
+
+2022-09-05 14:48:40.765921
+Program failed to understand voice
+
+2022-09-05 14:48:40.782268
+Analysing input: 'None'
+
+2022-09-05 14:48:40.806253
+Failed to understand command.
+
+2022-09-05 14:48:47.151768
+Voice Assistant Status: Listening
+
+2022-09-05 14:48:49.704304
+Listening...
+
+2022-09-05 14:48:53.520599
+Program recognizing
+
+2022-09-05 14:48:55.031016
+User said: obsidian
+
+
+2022-09-05 14:48:55.042751
+Analysing input: 'obsidian'
+
+2022-09-05 14:48:58.071579
+Success!
+
+2022-09-05 14:49:01.088555
+Voice Assistant Status: Listening
+
+2022-09-05 14:49:03.824816
+Listening...
+
+2022-09-05 14:49:08.503446
+Program recognizing
+
+2022-09-05 14:49:10.637453
+User said: open open Firefox
+
+
+2022-09-05 14:49:10.645449
+Analysing input: 'open open Firefox'
+
+2022-09-05 14:49:13.707998
+Success!
+
+2022-09-05 14:49:16.725073
+Voice Assistant Status: Listening
+
+2022-09-05 14:49:19.320280
+Listening...
+
+2022-09-05 14:49:28.230237
+Program recognizing
+
+2022-09-05 14:49:30.839346
+User said: program close
+
+
+2022-09-05 14:49:30.849833
+Analysing input: 'program close'
+
+2022-09-05 14:49:30.865823
+Failed to understand command.
+
+2022-09-05 14:49:37.227271
+Voice Assistant Status: Listening
+
+2022-09-05 14:49:39.760018
+Listening...
+
+2022-09-05 14:49:46.252755
+Program recognizing
+
+2022-09-05 14:49:48.053649
+User said: program program
+
+
+2022-09-05 14:49:48.075543
+Analysing input: 'program program'
+
+2022-09-05 14:49:48.099527
+Failed to understand command.
+
+2022-09-05 14:49:54.538866
+Voice Assistant Status: Listening
+
+2022-09-05 14:49:57.096055
+Listening...
+
+2022-09-05 14:50:00.497086
+Program recognizing
+
+2022-09-05 14:50:01.991579
+User said: close program
+
+
+2022-09-05 14:50:02.010071
+Analysing input: 'close program'
+
+2022-09-05 14:50:04.997700
+Program terminated via voice command
+
+2022-09-05 14:50:04.997700
+Program terminated via script ending.
+
+2022-09-05 14:51:50.902249
+Program Initialised
+
+2022-09-05 14:51:53.952496
+Voice Assistant Status: Configuration
+
+2022-09-05 14:52:04.807352
+Hello Ed!
+
+2022-09-05 14:52:07.557137
+Voice Assistant Status: Listening
+
+2022-09-05 14:52:10.519741
+Listening...
+
+2022-09-05 14:52:12.664699
+Program recognizing
+
+2022-09-05 14:52:14.042772
+Program failed to understand voice
+
+2022-09-05 14:52:14.058619
+Analysing input: 'None'
+
+2022-09-05 14:52:14.066832
+Failed to understand command.
+
+2022-09-05 14:52:20.395108
+Voice Assistant Status: Listening
+
+2022-09-05 14:52:22.957567
+Listening...
+
+2022-09-05 14:52:31.917864
+Program recognizing
+
+2022-09-05 14:52:33.971868
+User said: program program
+
+
+2022-09-05 14:52:33.994550
+Analysing input: 'program program'
+
+2022-09-05 14:52:34.010527
+Failed to understand command.
+
+2022-09-05 14:52:40.354718
+Voice Assistant Status: Listening
+
+2022-09-05 14:52:42.880444
+Listening...
+
+2022-09-05 14:52:53.264305
+Program recognizing
+
+2022-09-05 14:52:55.551788
+User said: good
+
+
+2022-09-05 14:52:55.566023
+Analysing input: 'good'
+
+2022-09-05 14:52:55.582045
+Failed to understand command.
+
+2022-09-05 14:53:01.935199
+Voice Assistant Status: Listening
+
+2022-09-05 14:53:04.468785
+Listening...
+
+2022-09-05 14:53:07.453034
+Program recognizing
+
+2022-09-05 14:53:08.864223
+User said: close program
+
+
+2022-09-05 14:53:08.881042
+Analysing input: 'close program'
+
+2022-09-05 14:53:11.863666
+Program terminated via voice command
+
+2022-09-09 09:38:40.605736
+Program Initialised
+
+2022-09-09 09:38:43.767007
+Voice Assistant Status: Configuration
+
+2022-09-09 09:38:54.023852
+Hello Ed!
+
+2022-09-09 09:38:56.805217
+Voice Assistant Status: Listening
+
+2022-09-09 09:38:59.857360
+Listening...
+
+2022-09-09 09:39:03.591003
+Program recognizing
+
+2022-09-09 09:39:04.934839
+User said: city in
+
+
+2022-09-09 09:39:04.950801
+Analysing input: 'city in'
+
+2022-09-09 09:39:04.974840
+Failed to understand command.
+
+2022-09-09 09:39:11.372616
+Voice Assistant Status: Listening
+
+2022-09-09 09:39:13.881362
+Listening...
+
+2022-09-09 09:39:21.213121
+Program recognizing
+
+2022-09-09 09:39:23.174862
+User said: open Assyrian
+
+
+2022-09-09 09:39:23.192910
+Analysing input: 'open Assyrian'
+
+2022-09-09 09:39:23.208911
+Failed to understand command.
+
+2022-09-09 09:39:29.582917
+Voice Assistant Status: Listening
+
+2022-09-09 09:39:32.120733
+Listening...
+
+2022-09-09 09:39:38.691177
+Program recognizing
+
+2022-09-09 09:39:39.948971
+Program failed to understand voice
+
+2022-09-09 09:39:39.964961
+Analysing input: 'None'
+
+2022-09-09 09:39:39.980950
+Failed to understand command.
+
+2022-09-09 09:39:46.366351
+Voice Assistant Status: Listening
+
+2022-09-09 09:39:48.890471
+Listening...
+
+2022-09-09 09:40:30.962939
+Program recognizing
+
+2022-09-09 09:40:35.743958
+User said: open obsidian open
+
+
+2022-09-09 09:40:35.757844
+Analysing input: 'open obsidian open'
+
+2022-09-09 09:40:38.785423
+Success!
+
+2022-09-09 09:40:41.803550
+Voice Assistant Status: Listening
+
+2022-09-09 09:40:44.429163
+Listening...
+
+2022-09-09 09:40:48.424410
+Program recognizing
+
+2022-09-09 09:40:50.034001
+User said: 10 minutes you don't like taking
+
+
+2022-09-09 09:40:50.049993
+Analysing input: '10 minutes you don't like taking'
+
+2022-09-09 09:40:50.067148
+Failed to understand command.
+
+2022-09-09 09:40:56.577593
+Voice Assistant Status: Listening
+
+2022-09-09 09:40:59.365685
+Program terminated via script ending.
+
+2022-09-12 21:29:38.463912
+Program Initialised
+
+2022-09-12 21:36:47.991962
+Voice Assistant Status: Configuration
+
+2022-09-12 21:39:17.943721
+Hello Ed!
+
+2022-09-12 21:39:20.670495
+Voice Assistant Status: Listening
+
+2022-09-12 21:39:23.580619
+Listening...
+
+2022-09-12 21:39:31.579795
+Program recognizing
+
+2022-09-12 21:39:33.054535
+User said: stop close program
+
+
+2022-09-12 21:39:33.064499
+Analysing input: 'stop close program'
+
+2022-09-12 21:39:35.828764
+Program terminated via voice command
+
+2022-09-12 21:47:57.098848
+Program Initialised
+
+2022-09-12 21:47:58.428398
+Voice Assistant Status: Configuration
+
+2022-09-12 21:48:08.110561
+Hello Ed!
+
+2022-09-12 21:48:13.702138
+Listening...
+
+2022-09-12 21:48:19.238574
+Program recognizing
+
+2022-09-12 21:48:20.133017
+Program failed to understand voice
+
+2022-09-12 21:48:20.137007
+Program terminated via script ending.
+
+2022-09-13 20:22:08.809642
+Program Initialised
+
+2022-09-13 20:22:11.527054
+Voice Assistant Status: Configuration
+
+2022-09-13 20:24:15.891167
+Program terminated via script ending.
+
+2022-09-13 20:29:33.117949
+Program Initialised
+
+2022-09-13 20:29:34.289712
+Voice Assistant Status: Configuration
+
+2022-09-13 20:29:39.504990
+no previous users detected
+
+2022-09-13 20:29:41.349958
+Voice Assistant Status: Listening
+
+2022-09-13 20:29:41.836376
+Listening...
+
+2022-09-13 20:29:49.970992
+Program recognizing
+
+2022-09-13 20:29:50.923078
+Program failed to understand voice
+
+2022-09-13 20:29:50.932094
+Did not understand.
+
+2022-09-13 20:29:55.778235
+Listening...
+
+2022-09-13 20:30:05.537775
+Program recognizing
+
+2022-09-13 20:30:06.181215
+Program failed to understand voice
+
+2022-09-13 20:30:06.190191
+Did not understand.
+
+2022-09-13 20:30:11.804457
+Listening...
+
+2022-09-13 20:30:37.384437
+Program recognizing
+
+2022-09-13 20:30:39.815125
+Program failed to understand voice
+
+2022-09-13 20:30:39.826099
+Did not understand.
+
+2022-09-13 20:30:43.415328
+Program terminated via script ending.
+
+2022-09-13 20:42:44.105494
+Program Initialised
+
+2022-09-13 20:42:46.206829
+Voice Assistant Status: Configuration
+
+2022-09-13 20:42:52.035576
+no previous users detected
+
+2022-09-13 20:42:54.121346
+Voice Assistant Status: Listening
+
+2022-09-13 20:42:54.673497
+Listening...
+
+2022-09-13 20:42:57.800611
+Program recognizing
+
+2022-09-13 20:42:58.703088
+Program failed to understand voice
+
+2022-09-13 20:42:58.715056
+Did not understand.
+
+2022-09-13 20:43:03.904346
+Listening...
+
+2022-09-13 20:43:09.240653
+Program recognizing
+
+2022-09-13 20:43:10.188862
+Program failed to understand voice
+
+2022-09-13 20:43:10.197839
+Did not understand.
+
+2022-09-13 20:43:16.024914
+Listening...
+
+2022-09-13 20:43:19.710182
+Program recognizing
+
+2022-09-13 20:43:20.730765
+Program failed to understand voice
+
+2022-09-13 20:43:20.740900
+Did not understand.
+
+2022-09-13 20:43:20.740900
+User failed to register name using voice. Proceeding to text input.
+
+2022-09-13 20:45:02.713378
+Program terminated via script ending.
+
+2022-09-13 20:46:40.925533
+Program Initialised
+
+2022-09-13 20:46:42.733026
+Voice Assistant Status: Configuration
+
+2022-09-13 20:46:48.668640
+no previous users detected
+
+2022-09-13 20:46:50.761742
+Voice Assistant Status: Listening
+
+2022-09-13 20:46:51.258745
+Listening...
+
+2022-09-13 20:46:57.106653
+Program recognizing
+
+2022-09-13 20:46:57.947509
+Program failed to understand voice
+
+2022-09-13 20:46:57.957482
+Did not understand.
+
+2022-09-13 20:47:22.290339
+Program terminated via script ending.
+
+2022-09-13 20:51:41.290326
+Program Initialised
+
+2022-09-13 20:51:42.875989
+Voice Assistant Status: Configuration
+
+2022-09-13 20:51:48.844822
+no previous users detected
+
+2022-09-13 20:51:50.915275
+Voice Assistant Status: Listening
+
+2022-09-13 20:51:51.371886
+Listening...
+
+2022-09-13 20:51:59.658455
+Program recognizing
+
+2022-09-13 20:52:00.443437
+Program failed to understand voice
+
+2022-09-13 20:52:00.453425
+Did not understand.
+
+2022-09-13 20:52:05.123817
+Listening...
+
+2022-09-13 20:52:09.918826
+Program recognizing
+
+2022-09-13 20:52:10.829044
+Program failed to understand voice
+
+2022-09-13 20:52:10.838019
+Did not understand.
+
+2022-09-13 20:52:16.074800
+Listening...
+
+2022-09-13 20:52:24.656761
+Program recognizing
+
+2022-09-13 20:52:25.626503
+Program failed to understand voice
+
+2022-09-13 20:52:25.636478
+Did not understand.
+
+2022-09-13 20:52:25.636478
+User failed to register name using voice. Proceeding to text input.
+
+2022-09-13 20:52:39.311623
+Program terminated via script ending.
+
+2022-09-13 20:55:32.481340
+Program Initialised
+
+2022-09-13 20:55:33.569941
+Voice Assistant Status: Configuration
+
+2022-09-13 20:55:39.529697
+no previous users detected
+
+2022-09-13 20:55:41.607846
+Voice Assistant Status: Listening
+
+2022-09-13 20:55:42.106416
+Listening...
+
+2022-09-13 20:55:53.312234
+Program recognizing
+
+2022-09-13 20:55:54.569497
+Program failed to understand voice
+
+2022-09-13 20:55:54.580467
+Did not understand.
+
+2022-09-13 20:55:59.274563
+Listening...
+
+2022-09-13 20:56:07.723184
+Program recognizing
+
+2022-09-13 20:56:08.835477
+Program failed to understand voice
+
+2022-09-13 20:56:08.844455
+Did not understand.
+
+2022-09-13 20:56:13.908692
+Listening...
+
+2022-09-13 20:56:19.802365
+Program recognizing
+
+2022-09-13 20:56:20.727217
+Program failed to understand voice
+
+2022-09-13 20:56:20.738188
+Did not understand.
+
+2022-09-13 20:56:20.739184
+User failed to register name using voice. Proceeding to text input.
+
+2022-09-13 20:57:54.576394
+Program terminated via script ending.
+
+2022-09-13 20:58:52.112489
+Program Initialised
+
+2022-09-13 20:58:53.641571
+Voice Assistant Status: Configuration
+
+2022-09-13 20:58:59.109826
+no previous users detected
+
+2022-09-13 20:59:00.905175
+Voice Assistant Status: Listening
+
+2022-09-13 20:59:01.360650
+Listening...
+
+2022-09-13 20:59:06.699014
+Program recognizing
+
+2022-09-13 20:59:07.527488
+Program failed to understand voice
+
+2022-09-13 20:59:07.536464
+Did not understand.
+
+2022-09-13 20:59:12.188315
+Listening...
+
+2022-09-13 20:59:15.843084
+Program recognizing
+
+2022-09-13 20:59:16.694505
+User said: Edward
+
+
+2022-09-13 20:59:16.705476
+Hello Edward!
+
+2022-09-13 20:59:23.710144
+Listening...
+
+2022-09-13 20:59:27.739141
+Program recognizing
+
+2022-09-13 20:59:28.786644
+User said: close program
+
+
+2022-09-13 20:59:28.796634
+Analysing input: 'close program'
+
+2022-09-13 20:59:31.479083
+Program terminated via voice command
+
+2022-09-13 20:59:38.656443
+Program Initialised
+
+2022-09-13 20:59:40.387806
+Voice Assistant Status: Configuration
+
+2022-09-13 20:59:43.331789
+username Edward detected
+
+2022-09-13 20:59:48.822798
+Listening...
+
+2022-09-13 20:59:54.979178
+Program recognizing
+
+2022-09-13 20:59:55.931372
+Program terminated via script ending.
+
+2022-09-13 20:57:01.287726
+Program Initialised
+
+2022-09-13 20:57:06.721089
+Voice Assistant Status: Configuration
+
+2022-09-13 20:57:12.551570
+no previous users detected
+
+2022-09-13 20:57:14.650452
+Voice Assistant Status: Listening
+
+2022-09-13 20:57:15.214807
+Listening...
+
+2022-09-13 20:57:41.860602
+Program recognizing
+
+2022-09-13 20:57:44.136089
+Program failed to understand voice
+
+2022-09-13 20:57:44.148058
+Did not understand.
+
+2022-09-13 20:57:48.803076
+Listening...
+
+2022-09-13 20:57:59.802796
+Program recognizing
+
+2022-09-13 20:58:00.802647
+Program failed to understand voice
+
+2022-09-13 20:58:00.812063
+Did not understand.
+
+2022-09-13 20:58:06.018486
+Listening...
+
+2022-09-13 20:58:11.534560
+Program recognizing
+
+2022-09-13 20:58:12.383573
+Program failed to understand voice
+
+2022-09-13 20:58:12.394544
+Did not understand.
+
+2022-09-13 20:58:12.395541
+User failed to register name using voice. Proceeding to text input.
+
+2022-09-13 20:59:58.642422
+Program terminated via script ending.
+
+2022-09-13 21:00:13.375451
+Program Initialised
+
+2022-09-13 21:00:16.082161
+Voice Assistant Status: Configuration
+
+2022-09-13 21:00:29.498820
+Program terminated via script ending.
+
+2022-09-13 21:00:56.688884
+Program Initialised
+
+2022-09-13 21:00:57.833585
+Voice Assistant Status: Configuration
+
+2022-09-13 21:01:35.644726
+Program terminated via script ending.
+
+2022-09-13 21:03:16.459654
+Program Initialised
+
+2022-09-13 21:03:17.762323
+Voice Assistant Status: Configuration
+
+2022-09-13 21:03:31.031166
+Program terminated via script ending.
+
+2022-09-13 21:05:42.360278
+Program Initialised
+
+2022-09-13 21:05:51.622881
+Voice Assistant Status: Configuration
+
+2022-09-13 21:06:01.626392
+Hello Edward!
+
+2022-09-13 21:06:07.184353
+Listening...
+
+2022-09-13 21:06:26.978053
+Program recognizing
+
+2022-09-13 21:06:29.070180
+User said: close program close program
+
+
+2022-09-13 21:06:29.080156
+Analysing input: 'close program close program'
+
+2022-09-13 21:06:32.045020
+Program terminated via voice command
+
+2022-09-13 21:06:46.933374
+Program Initialised
+
+2022-09-13 21:06:48.593578
+Voice Assistant Status: Configuration
+
+2022-09-13 21:06:51.635469
+username Edward detected
+
+2022-09-13 21:06:57.097909
+Listening...
+
+2022-09-13 21:06:59.986452
+Program recognizing
+
+2022-09-13 21:07:01.057622
+User said: open obsidian
+
+
+2022-09-13 21:07:01.078062
+Analysing input: 'open obsidian'
+
+2022-09-13 21:07:04.086696
+Success!
+
+2022-09-13 21:07:09.584604
+Listening...
+
+2022-09-13 21:07:12.759746
+Program recognizing
+
+2022-09-13 21:07:13.625320
+User said: close program
+
+
+2022-09-13 21:07:13.637288
+Analysing input: 'close program'
+
+2022-09-13 21:07:16.614550
+Program terminated via voice command
+
+2022-09-13 21:28:11.580066
+Program Initialised
+
+2022-09-13 21:28:37.052702
+Voice Assistant Status: Configuration
+
+2022-09-13 21:28:43.007211
+no previous users detected
+
+2022-09-13 21:28:45.078108
+Voice Assistant Status: Listening
+
+2022-09-13 21:28:45.585004
+Listening...
+
+2022-09-13 21:28:51.260171
+Program recognizing
+
+2022-09-13 21:28:52.221302
+Program failed to understand voice
+
+2022-09-13 21:28:52.230192
+Did not understand.
+
+2022-09-13 21:28:56.881786
+Listening...
+
+2022-09-13 21:29:04.212692
+Program recognizing
+
+2022-09-13 21:29:05.015207
+Program failed to understand voice
+
+2022-09-13 21:29:05.023078
+Did not understand.
+
+2022-09-13 21:29:10.060695
+Listening...
+
+2022-09-13 21:29:15.465328
+Program recognizing
+
+2022-09-13 21:29:16.046906
+Program failed to understand voice
+
+2022-09-13 21:29:16.049618
+Did not understand.
+
+2022-09-13 21:29:16.049618
+User failed to register name using voice. Proceeding to text input.
+
+2022-09-13 21:30:40.968069
+Program terminated via script ending.
+
+2022-09-13 21:37:45.056069
+Program Initialised
+
+2022-09-13 21:37:46.932556
+Voice Assistant Status: Configuration
+
+2022-09-13 21:37:52.913000
+no previous users detected
+
+2022-09-13 21:37:55.003970
+Voice Assistant Status: Listening
+
+2022-09-13 21:37:55.560483
+Listening...
+
+2022-09-13 21:37:59.154946
+Program recognizing
+
+2022-09-13 21:38:00.016641
+Program failed to understand voice
+
+2022-09-13 21:38:00.019634
+Did not understand.
+
+2022-09-13 21:38:04.693986
+Listening...
+
+2022-09-13 21:38:08.979526
+Program recognizing
+
+2022-09-13 21:38:09.804319
+Program failed to understand voice
+
+2022-09-13 21:38:09.808308
+Did not understand.
+
+2022-09-13 21:38:15.167583
+Listening...
+
+2022-09-13 21:38:18.384535
+Program recognizing
+
+2022-09-13 21:38:19.265728
+Program failed to understand voice
+
+2022-09-13 21:38:19.267723
+Did not understand.
+
+2022-09-13 21:38:19.267723
+User failed to register name using voice. Proceeding to text input.
+
+2022-09-13 21:38:32.685910
+Hello Christian!
+
+2022-09-13 21:38:39.781024
+Listening...
+
+2022-09-13 21:38:44.103965
+Program recognizing
+
+2022-09-13 21:38:44.817087
+Program failed to understand voice
+
+2022-09-13 21:38:44.820050
+Analysing input: 'None'
+
+2022-09-13 21:38:44.824053
+Failed to understand command.
+
+2022-09-13 21:38:50.555252
+Listening...
+
+2022-09-13 21:38:53.526667
+Program recognizing
+
+2022-09-13 21:38:54.499286
+User said: open obsidian
+
+
+2022-09-13 21:38:54.506555
+Analysing input: 'open obsidian'
+
+2022-09-13 21:38:57.475307
+Success!
+
+2022-09-13 21:39:00.048891
+Listening...
+
+2022-09-13 21:39:03.221832
+Program recognizing
+
+2022-09-13 21:39:04.153399
+User said: close program
+
+
+2022-09-13 21:39:04.156392
+Analysing input: 'close program'
+
+2022-09-13 21:39:07.152976
+Program terminated via voice command
+
+2022-09-13 21:42:56.042042
+Program Initialised
+
+2022-09-13 21:43:07.291092
+Voice Assistant Status: Configuration
+
+2022-09-13 21:43:10.356029
+username Christian detected
+
+2022-09-13 21:43:10.359016
+Hello Christian!
+
+2022-09-13 21:43:16.063146
+Listening...
+
+2022-09-13 21:43:20.544657
+Program recognizing
+
+2022-09-13 21:43:21.559974
+User said: create new account
+
+
+2022-09-13 21:43:21.562961
+Analysing input: 'create new account'
+
+2022-09-13 21:43:21.564928
+Failed to understand command.
+
+2022-09-13 21:43:30.352007
+Listening...
+
+2022-09-13 21:43:34.656206
+Program recognizing
+
+2022-09-13 21:43:35.443146
+Program failed to understand voice
+
+2022-09-13 21:43:35.446138
+Analysing input: 'None'
+
+2022-09-13 21:43:35.448133
+Failed to understand command.
+
+2022-09-13 21:43:43.952529
+Listening...
+
+2022-09-13 21:43:49.219782
+Program recognizing
+
+2022-09-13 21:43:50.006307
+Program failed to understand voice
+
+2022-09-13 21:43:50.020365
+Analysing input: 'None'
+
+2022-09-13 21:43:50.024354
+Failed to understand command.
+
+2022-09-13 21:43:58.473525
+Listening...
+
+2022-09-13 21:44:01.143834
+Program recognizing
+
+2022-09-13 21:44:01.739840
+User said: close program
+
+
+2022-09-13 21:44:01.756281
+Analysing input: 'close program'
+
+2022-09-13 21:44:04.475198
+Program terminated via voice command
+
+2022-09-13 21:48:14.370985
+Program Initialised
+
+2022-09-13 21:48:16.983579
+Voice Assistant Status: Configuration
+
+2022-09-13 21:48:20.071662
+username Christian detected
+
+2022-09-13 21:48:20.074620
+Hello Christian!
+
+2022-09-13 21:48:25.720994
+Listening...
+
+2022-09-13 21:48:29.564709
+Program recognizing
+
+2022-09-13 21:48:30.552404
+User said: create new account
+
+
+2022-09-13 21:48:30.554398
+Analysing input: 'create new account'
+
+2022-09-13 21:48:35.707009
+Creating new account
+
+2022-09-13 21:48:37.784926
+Voice Assistant Status: Listening
+
+2022-09-13 21:48:37.991313
+Listening...
+
+2022-09-13 21:48:41.994072
+Program recognizing
+
+2022-09-13 21:48:42.917675
+User said: Edward
+
+
+2022-09-13 21:48:42.919670
+Hello Edward!
+
+2022-09-13 21:48:49.921245
+Listening...
+
+2022-09-13 21:48:53.113881
+Program recognizing
+
+2022-09-13 21:48:54.051078
+User said: close program
+
+
+2022-09-13 21:48:54.053073
+Analysing input: 'close program'
+
+2022-09-13 21:48:57.039434
+Program terminated via voice command
+
+2022-09-13 22:05:08.130359
+Program Initialised
+
+2022-09-13 22:05:09.464792
+Voice Assistant Status: Configuration
+
+2022-09-13 22:05:25.765525
+Program terminated via script ending.
+
+2022-09-13 22:08:57.191101
+Program Initialised
+
+2022-09-13 22:08:58.740955
+Voice Assistant Status: Configuration
+
+2022-09-13 22:10:16.406778
+Program terminated via script ending.
+
+2022-09-13 22:10:37.153500
+Program Initialised
+
+2022-09-13 22:10:43.398773
+Program terminated via script ending.
+
+2022-09-13 22:10:51.033354
+Program Initialised
+
+2022-09-13 22:11:03.349419
+Program terminated via script ending.
+
+2022-09-13 22:11:08.830789
+Program Initialised
+
+2022-09-13 22:11:11.913513
+Program terminated via script ending.
+
+2022-09-13 22:13:44.662274
+Program Initialised
+
+2022-09-13 22:13:45.728053
+Voice Assistant Status: Configuration
+
+2022-09-13 22:13:59.554857
+Program terminated via script ending.
+
+2022-09-14 20:14:57.482514
+Program Initialised
+
+2022-09-14 20:15:00.415067
+Program terminated via script ending.
+
+2022-09-14 20:17:00.765884
+Program Initialised
+
+2022-09-14 20:17:02.186885
+Voice Assistant Status: Configuration
+
+2022-09-14 20:17:13.004243
+Hello Edward!
+
+2022-09-14 20:17:18.465464
+Listening...
+
+2022-09-14 20:17:23.165985
+Program recognizing
+
+2022-09-14 20:17:24.074263
+Program failed to understand voice
+
+2022-09-14 20:17:24.084188
+Analysing input: 'None'
+
+2022-09-14 20:17:35.475264
+Program terminated via script ending.
 

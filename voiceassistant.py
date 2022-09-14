@@ -1,6 +1,9 @@
 
+from ast import Break
 from cProfile import label
 from cgitb import text
+import atexit
+from fileinput import close
 import subprocess
 import wolframalpha
 import pyttsx3
@@ -23,6 +26,7 @@ import ctypes
 import time
 import requests
 import shutil
+import openai
 from clint.textui import progress
 from bs4 import BeautifulSoup
 import win32com.client as wincl
@@ -32,16 +36,20 @@ from PIL import ImageTk, Image
 
 # Startup
 
-global name
-name = None
+global closebyvoice
+closebyvoice = False
 
+
+# clearing the terminal
 clear = lambda: os.system('cls')
 clear()
+
+# getting the tts set up
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 
-
+#finding all account (data to be implemented)
 accountdata = []
 accountdatatemp = []
 accounts = open("accountdata.txt", "r+")
@@ -57,31 +65,35 @@ for i in accountdatatemp:
         temp.remove(temp[0])
         username = ' '.join(temp)
         accountdata.append(username)
+# accountdata is a list containing all usernames, soon to be made into dictionary
 
-userdata = open('userdata.txt', 'w+')
+#this opens the logging text file
+userdata = open('userdata.txt', 'a')
 
+#function to both add lines to log file, and print
 def log(message):
     date = str(datetime.now())
     userdata.write(date + "\n" + message + "\n\n")
-    print(date + "\n" + message + "\n\n")
+    print(date + "\n" + message + "\n")
 
+#small function for tts
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
+
 def takeCommand():
-     
-    r = sr.Recognizer()
+    mic = sr.Recognizer()
      
     with sr.Microphone() as source:
          
         boxstatus("Listening...")
-        r.pause_threshold = 1
-        audio = r.listen(source)
+        mic.pause_threshold = 1
+        audio = mic.listen(source)
   
     try:
         boxstatus('Program recognizing')
-        query = r.recognize_google(audio, language ='en-in')
+        query = mic.recognize_google(audio, language ='en-in')
         boxstatus(f"User said: {query}\n")
   
     except Exception as e: 
@@ -93,12 +105,9 @@ def takeCommand():
 def boxstatus(input):
     window.label.destroy()
     window.imageLabel.destroy()
-
-    img = Image.open("./assets/voiceassistlogo.png")
-    resized = img.resize((75,75) , resample=3)
-    img = ImageTk.PhotoImage(resized)
     
-    window.imageLabel = tk.Label(window, image = img)
+    img = tk.PhotoImage(file="./assets/voiceassistlogo.png")
+    window.imageLabel = tk.Label(image = img)
     
     window.imageLabel.pack()
 
@@ -107,23 +116,83 @@ def boxstatus(input):
     window.update()
     log(input)
 
-def intro():
-    speak("what is your name")
-    boxstatus('Voice Assistant Status: Listening')
-    name = str(takeCommand())
-    if name != 'None':
+def confirmmanualusername():
+    print(window.entry.get())
+    if window.entry.get() == '':
+        speak("Please try again.")
+        manualtextbox()
+    else:
+        name = window.entry.get()
+        window.imageLabel.destroy()
+        window.entry.destroy()
+        window.yesbutton.destroy()
+        window.imageLabel = tk.Label(window, image = img)
+        
+        window.imageLabel.pack()
+
+        window.label = ttk.Label(text = input)
+        window.label.pack()
+
         boxstatus(f'Hello {name}!')
         speak("hello" + name + ", how are you today! i hope you are well")
         accounts.write("USER: " + name + "\n")
         a = True
         while a:
             main()
-            time.sleep(3)
-    else:
-        boxstatus('Did not understand.')
-        speak("well, i wasn't able to catch your name, so i'll ask again.")
-        time.sleep(0.5)
-        intro()
+
+def manualtextbox():
+    global window
+    window.label.destroy()
+    window.imageLabel.destroy()
+
+    window.imageLabel = tk.Label(window, image = img)
+    
+    window.imageLabel.pack()
+
+    window.iconbitmap('./assets/voiceassistlogo.ico')
+    window.title("Ed's Voice Assistant!")
+    window.geometry('320x130+5+5')
+
+    window.entry = tk.Entry()
+    window.entry.pack()
+    window.yesbutton = ttk.Button(window, text="Confirm Username", command=confirmmanualusername)
+    window.yesbutton.pack()
+    window.attributes('-topmost', 1)
+    window.update()
+
+
+def intro():
+    speak("what is your name")
+    boxstatus('Voice Assistant Status: Listening')
+    namecount = 0
+
+    while namecount != 3:
+        name = str(takeCommand())
+        if name != 'None':
+            namecount = 2
+            boxstatus(f'Hello {name}!')
+            speak("hello" + name + ", how are you today! i hope you are well")
+            accounts.write("USER: " + name + "\n")
+            a = True
+            while a:
+                main()
+        else:
+            boxstatus('Did not understand.')
+            if namecount == 0:
+                speak("well, i wasn't able to catch your name, could you repeat that?")
+            elif namecount == 1:
+                speak("weird, i didn't catch that again. please repeat what you said.")
+            elif namecount == 2:
+                namecount = 3
+                log("User failed to register name using voice. Proceeding to text input.")
+                speak("Your name must be quite special. Please type it in the box provided.")
+                manualtextbox()
+                break
+               
+            namecount += 1
+
+    
+            
 
 def finduser(username):
     newdow.destroy()
@@ -135,11 +204,10 @@ def finduser(username):
     a = True
     while a:
         main()
-        time.sleep(3)
 
 def accountselection():
-    global newdow
     window.destroy()
+    global newdow
     newdow = tk.Tk()
     height = int(round(len(accountdata) * (150/6)))
     newdow.geometry(f'320x{height}+470+50')
@@ -154,46 +222,82 @@ def startup():
     boxstatus('Voice Assistant Status: Configuration')
     speak('processing, starting up')
     if not accountdata:
-        speak('no previous user interaction detected')
-        log('no previous user interaction detected')
+        speak('no previous users detected')
+        log('no previous users detected')
         intro()
     elif len(accountdata) == 1:
+        global name
         name = accountdata[0]
         log(f'username {name} detected')
+        boxstatus(f"Hello {name}!")
         speak("hello" + name + ", welcome back.")
         a = True
         while a:
             main()
-            time.sleep(3)
     else:
         speak('multiple users detected. please choose your account.')
         accountselection()
         
 
 def main():
-    boxstatus('Voice Assistant Status: Listening')
     speak("what would you like to do?")
+    programUnderstood = False
 
     query = str(takeCommand()).split()
-    boxstatus(f"Analysing input: '{' '.join(query)}'")
-    
+    if query != None:
+        boxstatus(f"Analysing input: '{' '.join(query)}'")
+
+    # base functions
     if 'obsidian' in query:
         speak("Understood, opening Obsidian")
         os.startfile("C:\\Users\\edwar\\AppData\\Local\\Obsidian\\Obsidian.exe")
         boxstatus("Success!")
+        programUnderstood = True
     elif 'restart' in query:
         speak("restarting")
         os.execv(sys.executable, ['python'] + sys.argv)
         boxstatus("Success!")
+        programUnderstood = True
     elif 'Firefox' in query:
         speak("Understood, opening firefox.")
         os.startfile("C:\\Program Files\\Mozilla Firefox\\firefox.exe")
         boxstatus("Success!")
+        programUnderstood = True
     elif 'close program' in ' '.join(query):
         speak("Understood, see you again soon.")
-        log('Program terminated')
+        log('Program terminated via voice command')
+        global closebyvoice
+        closebyvoice = True
         exit()
-    else:
+    elif 'create new account' in ' '.join(query):
+        speak("all right. I'll forget your current account, and create a new one")
+        log("Creating new account")
+        intro()
+
+    elif str(' '.join(query)) != "None":
+    # putting it through openai
+        speak("Well I couldn't understand that, let me put it through open a i.")
+        openai.api_key = "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"
+
+        response = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=' '.join(query),
+        temperature=0.3,
+        max_tokens=150,
+        top_p=1.0,
+        frequency_penalty=0.0,
+        presence_penalty=0.0,
+        echo = True
+        )
+        print(response)
+        answer = response['choices'][0]['text']
+        print(str(answer))
+        speak(str(answer))
+        if str(answer) != "None":
+            programUnderstood = True
+
+
+    if programUnderstood == False:
         boxstatus("Failed to understand command.")
         speak("Sorry. i didn't catch that.")
 
@@ -201,11 +305,8 @@ def maingui():
     global window
     window = tk.Tk()
 
-    img = Image.open("./assets/voiceassistlogo.png")
-    resized = img.resize((75,75) , resample=3)
-    img = ImageTk.PhotoImage(resized)
-    
-    window.imageLabel = tk.Label(window, image = img)
+    img = tk.PhotoImage(file="./assets/voiceassistlogo.png")
+    window.imageLabel = tk.Label(image = img)
     
     window.imageLabel.pack()
 
@@ -213,26 +314,31 @@ def maingui():
     window.title("Ed's Voice Assistant!")
     window.geometry('320x130+5+5')
 
-    global label
-    window.label = ttk.Label(window, text='tkinter moment')
+    window.label = ttk.Label(window, text='processing...')
     window.label.pack()
 
     window.attributes('-topmost', 1)
 
     window.update()
 
+def exitlog():
+    global closebyvoice
+    if closebyvoice == False:
+        log('Program terminated via script ending.')
+    userdata.close()
+
+
 
 #initial_window creation, i.e maingui with intialization button
 log('Program Initialised')
+atexit.register(exitlog)
 
 global window
 window = tk.Tk()
 
 #visual stuff
 global img
-img = Image.open("./assets/voiceassistlogo.png")
-resized = img.resize((75,75) , resample=3)
-img = ImageTk.PhotoImage(resized)
+img = tk.PhotoImage(file="./assets/voiceassistlogo.png")
 
 window.imageLabel = tk.Label(window, image = img)
 window.imageLabel.pack()
