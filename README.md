@@ -1,7 +1,8 @@
-# Voice Assistant!!!!!!!!!!!!!!
+# Voice Assistant
 
-This is a very cool, epic, awesome voice assistant made by me. Is there a feature that you want implemented? Do you think that this project could be the next facebook?
+Hello!
 
-Well too bad. As soon as the comp sci task is finished I'm never gonna touch this repo ever again.
+You're probably reading this because I asked you to do the survey. Well, you can't really test the program unless you have the many python libraries installed. And also its all personalised for me. In hindsight this was a bad idea.
 
-Enjoy reading through my terrible, uncommented code (comments may be a part of the task, I am yet to actually read the task sheet)
+Thanks anyways, 
+Ed
