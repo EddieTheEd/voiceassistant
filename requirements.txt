@@ -1,0 +1,8 @@
+atexit
+pyttsx3
+sys
+tkinter
+speech_recognition
+datetime
+os
+openai

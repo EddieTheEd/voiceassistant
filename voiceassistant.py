@@ -1,43 +1,20 @@
-
-from ast import Break
-from cProfile import label
-from cgitb import text
 import atexit
-from fileinput import close
-import subprocess
-import wolframalpha
 import pyttsx3
 import sys
 import tkinter as tk
-from tkinter import PhotoImage, ttk
-import json
-import random
-import operator
+from tkinter import ttk
 import speech_recognition as sr
 from datetime import datetime
-import wikipedia
-import webbrowser
 import os
-import winshell
-import pyjokes
-import feedparser
-import smtplib
-import ctypes
-import time
-import requests
-import shutil
 import openai
-from clint.textui import progress
-from bs4 import BeautifulSoup
-import win32com.client as wincl
-from urllib.request import urlopen
-from PIL import ImageTk, Image
+
 
 
 # Startup
 
 global closebyvoice
 closebyvoice = False
+openai.api_key = None
 
 
 # clearing the terminal
@@ -106,7 +83,6 @@ def boxstatus(input):
     window.label.destroy()
     window.imageLabel.destroy()
     
-    img = tk.PhotoImage(file="./assets/voiceassistlogo.png")
     window.imageLabel = tk.Label(image = img)
     
     window.imageLabel.pack()
@@ -117,9 +93,12 @@ def boxstatus(input):
     log(input)
 
 def confirmmanualusername():
-    print(window.entry.get())
+
     if window.entry.get() == '':
         speak("Please try again.")
+        window.entry.destroy()
+        window.imageLabel.destroy()
+        window.yesbutton.destroy()
         manualtextbox()
     else:
         name = window.entry.get()
@@ -138,12 +117,13 @@ def confirmmanualusername():
         accounts.write("USER: " + name + "\n")
         a = True
         while a:
+            
             main()
+
+
 
 def manualtextbox():
     global window
-    window.label.destroy()
-    window.imageLabel.destroy()
 
     window.imageLabel = tk.Label(window, image = img)
     
@@ -151,7 +131,7 @@ def manualtextbox():
 
     window.iconbitmap('./assets/voiceassistlogo.ico')
     window.title("Ed's Voice Assistant!")
-    window.geometry('320x130+5+5')
+    window.geometry('320x130+50+160')
 
     window.entry = tk.Entry()
     window.entry.pack()
@@ -175,6 +155,7 @@ def intro():
             accounts.write("USER: " + name + "\n")
             a = True
             while a:
+
                 main()
         else:
             boxstatus('Did not understand.')
@@ -186,6 +167,8 @@ def intro():
                 namecount = 3
                 log("User failed to register name using voice. Proceeding to text input.")
                 speak("Your name must be quite special. Please type it in the box provided.")
+                window.label.destroy()
+                window.imageLabel.destroy()
                 manualtextbox()
                 break
                
@@ -203,6 +186,7 @@ def finduser(username):
     speak("hello" + name + ", welcome back.")
     a = True
     while a:
+
         main()
 
 def accountselection():
@@ -233,73 +217,117 @@ def startup():
         speak("hello" + name + ", welcome back.")
         a = True
         while a:
+
             main()
     else:
         speak('multiple users detected. please choose your account.')
         accountselection()
         
-
 def main():
-    speak("what would you like to do?")
     programUnderstood = False
+    if openai.api_key == None:
+        global open
+        open = tk.Tk()
+        open.geometry('320x70+50+400')
+        open.title("Insert OpenAI key:")
+        open.iconbitmap('./assets/voiceassistlogo.ico')
 
+        help = tk.Tk()
+        help.geometry('320x115+450+160')
+        help.title("Commands:")
+        help.iconbitmap('./assets/voiceassistlogo.ico')
+        help.label = tk.Label(help, text = "Things you can say!\n'obsidian': Opens obsidian\n'Firefox': Opens firefox\n'restart': Restarts\n'close program': Closes program\n'{generic questions}': Will be parsed through\nOpenAI for answer.")
+        help.label.pack()
+        help.update()
+        help.attributes('-topmost', 1)
+
+        def askforkey():
+            open.label = ttk.Label(open, text = "This is required for the code to work.")
+            open.label.pack()
+            open.entry = tk.Entry(open)
+            open.entry.pack()
+            open.yesbutton = ttk.Button(open, text="Confirm Key", command=confirmkey)
+            open.yesbutton.pack()
+            open.attributes('-topmost', 1)
+            open.update()
+
+        def confirmkey():
+            if open.entry.get() == '':
+                open.label.destroy()
+                open.entry.destroy()
+                open.yesbutton.destroy()
+                speak("Try again")
+                askforkey()
+            else:
+                openai.api_key = str(open.entry.get())
+                open.destroy()
+                main()
+        speak("please input open a i key")
+        askforkey()
+        
+
+        open.mainloop()
+
+    speak("what would you like to do?")
     query = str(takeCommand()).split()
-    if query != None:
+    print(query)
+    if query[0] != "None":
         boxstatus(f"Analysing input: '{' '.join(query)}'")
 
     # base functions
-    if 'obsidian' in query:
-        speak("Understood, opening Obsidian")
-        os.startfile("C:\\Users\\edwar\\AppData\\Local\\Obsidian\\Obsidian.exe")
-        boxstatus("Success!")
-        programUnderstood = True
-    elif 'restart' in query:
-        speak("restarting")
-        os.execv(sys.executable, ['python'] + sys.argv)
-        boxstatus("Success!")
-        programUnderstood = True
-    elif 'Firefox' in query:
-        speak("Understood, opening firefox.")
-        os.startfile("C:\\Program Files\\Mozilla Firefox\\firefox.exe")
-        boxstatus("Success!")
-        programUnderstood = True
-    elif 'close program' in ' '.join(query):
-        speak("Understood, see you again soon.")
-        log('Program terminated via voice command')
-        global closebyvoice
-        closebyvoice = True
-        exit()
-    elif 'create new account' in ' '.join(query):
-        speak("all right. I'll forget your current account, and create a new one")
-        log("Creating new account")
-        intro()
-
-    elif str(' '.join(query)) != "None":
-    # putting it through openai
-        speak("Well I couldn't understand that, let me put it through open a i.")
-        openai.api_key = "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"
-
-        response = openai.Completion.create(
-        model="text-davinci-002",
-        prompt=' '.join(query),
-        temperature=0.3,
-        max_tokens=150,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0,
-        echo = True
-        )
-        print(response)
-        answer = response['choices'][0]['text']
-        print(str(answer))
-        speak(str(answer))
-        if str(answer) != "None":
+        if 'obsidian' in query:
+            speak("Understood, opening Obsidian")
+            os.startfile("C:\\Users\\edwar\\AppData\\Local\\Obsidian\\Obsidian.exe")
+            boxstatus("Success!")
             programUnderstood = True
+            main()
+        elif 'restart' in query:
+            speak("restarting")
+            os.execv(sys.executable, ['python'] + sys.argv)
+            boxstatus("Success!")
+            programUnderstood = True
+        elif 'Firefox' in query:
+            speak("Understood, opening firefox.")
+            os.startfile("C:\\Program Files\\Mozilla Firefox\\firefox.exe")
+            boxstatus("Success!")
+            programUnderstood = True
+            main()
+        elif 'close program' in ' '.join(query):
+            speak("Understood, see you again soon.")
+            log('Program terminated via voice command')
+            global closebyvoice
+            closebyvoice = True
+            exit()
+        elif 'create new account' in ' '.join(query):
+            speak("all right. I'll forget your current account, and create a new one")
+            log("Creating new account")
+            intro()
 
+        else:
+            # putting it through openai
+            speak("putting through open a i")
+
+            response = openai.Completion.create(
+            model="text-davinci-002",
+            prompt=' '.join(query),
+            temperature=0.3,
+            max_tokens=150,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0,
+            )
+            answer = response['choices'][0]['text']
+            log("openai request answer: "+ answer)
+            speak(str(answer))
+            if str(answer) != "None":
+                programUnderstood = True
+                main()
+            
 
     if programUnderstood == False:
         boxstatus("Failed to understand command.")
         speak("Sorry. i didn't catch that.")
+        main()
 
 def maingui():
     global window
@@ -312,7 +340,7 @@ def maingui():
 
     window.iconbitmap('./assets/voiceassistlogo.ico')
     window.title("Ed's Voice Assistant!")
-    window.geometry('320x130+5+5')
+    window.geometry('320x130+50+160')
 
     window.label = ttk.Label(window, text='processing...')
     window.label.pack()
@@ -350,11 +378,10 @@ window.iconbitmap('./assets/voiceassistlogo.ico')
 window.title("Ed's Voice Assistant!")
 window.text = tk.StringVar()
 window.text.set("Press to start program!")
-window.geometry('320x130+5+5')
+window.geometry('320x130+50+160')
 
 window.label = ttk.Button(window, textvariable = window.text, command = startup)
 
 window.label.pack()
 window.attributes('-topmost', 1)
 window.mainloop()
-
