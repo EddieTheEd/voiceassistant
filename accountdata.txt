@@ -1,4 +1,0 @@
-USER: Edward
-USER: Dasindu
-USER: Christian
-USER: Angie

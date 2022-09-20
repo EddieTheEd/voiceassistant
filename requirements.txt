@@ -1,6 +1,5 @@
-pyttsx3
-tkinter
-speech_recognition
-datetime
-os
-openai
+pyttsx3==2.90
+tk==0.1.0
+SpeechRecognition==3.8.1
+datetime==4.5  
+openai==0.23.0

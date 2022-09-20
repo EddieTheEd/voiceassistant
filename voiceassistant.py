@@ -8,14 +8,11 @@ from datetime import datetime
 import os
 import openai
 
-
-
 # Startup
 
 global closebyvoice
 closebyvoice = False
 openai.api_key = None
-
 
 # clearing the terminal
 clear = lambda: os.system('cls')
@@ -42,6 +39,7 @@ for i in accountdatatemp:
         temp.remove(temp[0])
         username = ' '.join(temp)
         accountdata.append(username)
+
 # accountdata is a list containing all usernames, soon to be made into dictionary
 
 #this opens the logging text file
@@ -119,7 +117,6 @@ def confirmmanualusername():
         accounts.write("USER: " + name + "\n")
         a = True
         while a:
-            
             main()
 
 
