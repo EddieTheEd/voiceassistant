@@ -1542,3 +1542,224 @@ Analysing input: 'close program'
 2022-09-15 22:22:34.610978
 Program terminated via voice command
 
+2022-09-16 09:12:20.614312
+Program Initialised
+
+2022-09-16 09:12:21.964308
+Voice Assistant Status: Configuration
+
+2022-09-16 09:13:08.837583
+Program terminated via script ending.
+
+2022-09-16 09:27:32.589844
+Program Initialised
+
+2022-09-16 09:27:41.383258
+Voice Assistant Status: Configuration
+
+2022-09-16 09:27:44.521609
+username Edward detected
+
+2022-09-16 09:27:44.532230
+Hello Edward!
+
+2022-09-16 09:27:47.321423
+OpenAI Key required
+
+2022-09-16 09:27:47.596707
+OpenAI Key required
+
+2022-09-16 09:27:56.949092
+Listening...
+
+2022-09-16 09:28:01.425214
+Program recognizing
+
+2022-09-16 09:28:02.716986
+Program failed to understand voice
+
+2022-09-16 09:28:02.732430
+Failed to understand command.
+
+2022-09-16 09:28:08.428475
+Listening...
+
+2022-09-16 09:28:12.203275
+Program recognizing
+
+2022-09-16 09:28:13.709857
+User said: please define chromatography
+
+
+2022-09-16 09:28:13.709857
+Analysing input: 'please define chromatography'
+
+2022-09-16 09:28:20.290187
+openai request answer: 
+
+Chromatography is a technique used to separate and analyze the components of a mixture. The mixture is dissolved in a fluid and then injected onto a column. The different components of the mixture travel through the column at different rates and are separated.
+
+2022-09-16 09:28:37.443414
+Listening...
+
+2022-09-16 09:28:44.067504
+Program recognizing
+
+2022-09-16 09:28:45.568591
+User said: close program
+
+
+2022-09-16 09:28:45.579413
+Analysing input: 'close program'
+
+2022-09-16 09:28:48.546134
+Program terminated via voice command
+
+2022-09-16 10:30:19.297427
+Program Initialised
+
+2022-09-16 10:30:26.588418
+Voice Assistant Status: Configuration
+
+2022-09-16 10:30:37.381241
+Hello Edward!
+
+2022-09-16 10:30:40.200314
+OpenAI Key required
+
+2022-09-16 10:30:40.452215
+OpenAI Key required
+
+2022-09-16 10:30:40.467975
+OpenAI Key required
+
+2022-09-16 10:30:51.952784
+Listening...
+
+2022-09-16 10:30:54.820899
+Program recognizing
+
+2022-09-16 10:30:56.200608
+User said: create new account
+
+
+2022-09-16 10:30:56.216215
+Analysing input: 'create new account'
+
+2022-09-16 10:31:01.348236
+Creating new account
+
+2022-09-16 10:31:03.397707
+Voice Assistant Status: Listening
+
+2022-09-16 10:31:03.641656
+Listening...
+
+2022-09-16 10:31:08.063130
+Program recognizing
+
+2022-09-16 10:31:09.497477
+User said: Christian
+
+
+2022-09-16 10:31:09.504367
+Hello Christian!
+
+2022-09-16 10:31:16.569144
+Listening...
+
+2022-09-16 10:31:22.909321
+Program recognizing
+
+2022-09-16 10:31:23.869168
+User said: close program
+
+
+2022-09-16 10:31:23.877162
+Analysing input: 'close program'
+
+2022-09-16 10:31:26.853509
+Program terminated via voice command
+
+2022-09-16 10:33:17.618747
+Program Initialised
+
+2022-09-16 10:33:19.843578
+Voice Assistant Status: Configuration
+
+2022-09-16 10:33:29.948354
+Hello Christian!
+
+2022-09-16 10:33:32.883444
+OpenAI Key required
+
+2022-09-16 10:33:33.112363
+OpenAI Key required
+
+2022-09-16 10:33:33.134225
+OpenAI Key required
+
+2022-09-16 10:33:40.013040
+Listening...
+
+2022-09-16 10:33:44.440150
+Program recognizing
+
+2022-09-16 10:33:46.004604
+User said: create new accounts
+
+
+2022-09-16 10:33:46.007999
+Analysing input: 'create new accounts'
+
+2022-09-16 10:33:51.139203
+Creating new account
+
+2022-09-16 10:33:53.187773
+Voice Assistant Status: Listening
+
+2022-09-16 10:33:53.393208
+Listening...
+
+2022-09-16 10:34:03.116315
+Program recognizing
+
+2022-09-16 10:34:04.977228
+User said: Angie
+
+
+2022-09-16 10:34:04.984622
+Hello Angie!
+
+2022-09-16 10:34:11.899201
+Listening...
+
+2022-09-16 10:34:17.106221
+Program recognizing
+
+2022-09-16 10:34:18.894452
+User said: learn obsidian
+
+
+2022-09-16 10:34:18.911552
+Analysing input: 'learn obsidian'
+
+2022-09-16 10:34:21.855646
+Success!
+
+2022-09-16 10:34:24.471976
+Listening...
+
+2022-09-16 10:34:32.580300
+Program recognizing
+
+2022-09-16 10:34:34.292474
+User said: close program
+
+
+2022-09-16 10:34:34.308434
+Analysing input: 'close program'
+
+2022-09-16 10:34:37.259196
+Program terminated via voice command
+

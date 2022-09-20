@@ -83,7 +83,8 @@ def boxstatus(input):
     window.label.destroy()
     window.imageLabel.destroy()
     
-    window.imageLabel = tk.Label(image = img)
+    coolmage = tk.PhotoImage(file="./assets/voiceassistlogo.png")
+    window.imageLabel = tk.Label(window, image = coolmage)
     
     window.imageLabel.pack()
 
@@ -105,6 +106,7 @@ def confirmmanualusername():
         window.imageLabel.destroy()
         window.entry.destroy()
         window.yesbutton.destroy()
+        img = tk.PhotoImage(file="./assets/voiceassistlogo.png")
         window.imageLabel = tk.Label(window, image = img)
         
         window.imageLabel.pack()
@@ -125,6 +127,7 @@ def confirmmanualusername():
 def manualtextbox():
     global window
 
+    img = tk.PhotoImage(file="./assets/voiceassistlogo.png")
     window.imageLabel = tk.Label(window, image = img)
     
     window.imageLabel.pack()
@@ -226,6 +229,9 @@ def startup():
 def main():
     programUnderstood = False
     if openai.api_key == None:
+
+        boxstatus("OpenAI Key required")
+
         global open
         open = tk.Tk()
         open.geometry('320x70+50+400')
@@ -233,13 +239,14 @@ def main():
         open.iconbitmap('./assets/voiceassistlogo.ico')
 
         help = tk.Tk()
-        help.geometry('320x115+450+160')
+        help.geometry('320x130+450+160')
         help.title("Commands:")
         help.iconbitmap('./assets/voiceassistlogo.ico')
-        help.label = tk.Label(help, text = "Things you can say!\n'obsidian': Opens obsidian\n'Firefox': Opens firefox\n'restart': Restarts\n'close program': Closes program\n'{generic questions}': Will be parsed through\nOpenAI for answer.")
+        help.label = tk.Label(help, text = "Things you can do!\n'obsidian': Opens obsidian\n'Firefox': Opens firefox\n'restart': Restarts\n'close program': Closes program\n'create new account': Creates new account\n'{generic questions}': Will be parsed through\nOpenAI for answer.")
         help.label.pack()
         help.update()
         help.attributes('-topmost', 1)
+        boxstatus("OpenAI Key required")
 
         def askforkey():
             open.label = ttk.Label(open, text = "This is required for the code to work.")
@@ -250,6 +257,7 @@ def main():
             open.yesbutton.pack()
             open.attributes('-topmost', 1)
             open.update()
+            boxstatus("OpenAI Key required")
 
         def confirmkey():
             if open.entry.get() == '':
@@ -262,11 +270,12 @@ def main():
                 openai.api_key = str(open.entry.get())
                 open.destroy()
                 main()
-        speak("please input open a i key")
-        askforkey()
-        
 
+        askforkey()
+        speak("please input open a i key")
+        
         open.mainloop()
+        boxstatus("OpenAI Key required")
 
     speak("what would you like to do?")
     query = str(takeCommand()).split()
